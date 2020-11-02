@@ -3,7 +3,7 @@
 }
 
 body {
-    background: red;
+    /* background: red; */
     margin: 0;
 }
 
@@ -20,6 +20,7 @@ body {
 .content {
     margin-left: 150px;
     padding: 10px;
+    min-height: 200vh;
 }
 
 .logo {
@@ -43,4 +44,82 @@ body {
     bottom: -8px;
     left: 50%;
     transform: translateX(-50%);
+}
+
+.wrap {
+    padding: 10px;
+    background: burlywood;
+    border: 2px solid #000;
+    max-width: 600px;
+}
+
+.wrap .item {
+    border: 2px solid red;
+    padding: 5px;
+    color: white;
+    margin-bottom: 10px;
+    width: 100px;
+}
+
+.item2 {
+    background-color: chartreuse;
+    position: relative;
+}
+
+
+.item3 {
+    background-color: brown;
+}
+
+
+.item4 {
+    background-color: blue;
+}
+
+.nav > ul {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    padding: 20px 0;
+}
+
+.nav > ul li{
+    margin-bottom: 15px;
+}
+
+.nav ul li a {
+    color: white;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.nav {
+    position: relative;
+}
+.nav::before, .nav::after {
+    display: block;
+    content: "";
+    width: 90px;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nav::after {
+    top: auto;
+    bottom: 0;
+}
+
+.search-icon {
+    padding: 20px 0;
+    text-align: center;
+}
+
+.search-icon svg {
+    fill: white;
+    width: 35px;
 }
