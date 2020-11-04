@@ -5,6 +5,7 @@
 body {
     /* background: red; */
     margin: 0;
+    font-family: 'Poppins', 'Arial', sans-serif;
 }
 
 .aside {
@@ -17,10 +18,9 @@ body {
     padding: 10px;
 }
 
-.content {
+.main-content {
     margin-left: 150px;
     padding: 10px;
-    min-height: 200vh;
 }
 
 .logo {
@@ -123,4 +123,28 @@ body {
 .search-icon svg {
     fill: white;
     width: 35px;
+}
+
+
+.services {
+    display: flex;
+}
+
+.services > .item {
+    border-radius: 6px;
+    background-color: #f6f6f6;
+    margin: 0 30px;
+    padding: 0 62px;
+}
+
+.services .item-title {
+    text-transform: uppercase;
+    font-size: 30px;
+    color: #353a3f;
+}
+
+@media (max-width: 500px) {
+    .services {
+        flex-direction: column;
+    } 
 }
