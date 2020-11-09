@@ -10,9 +10,9 @@ body {
 
 .aside {
     width: 150px;
-    height: 100vh;
     background-color: #282d32;
-    position: absolute;
+    position: fixed;
+    height: 100%;
     top: 0;
     left: 0;
     padding: 10px;
@@ -128,13 +128,17 @@ body {
 
 .services {
     display: flex;
+    padding: 0 90px;
 }
 
 .services > .item {
     border-radius: 6px;
-    background-color: #f6f6f6;
+    background-color: #808080;
     margin: 0 30px;
     padding: 0 62px;
+    position: relative;
+    margin-top: 60px;
+    min-width: 290px;
 }
 
 .services .item-title {
@@ -143,8 +147,61 @@ body {
     color: #353a3f;
 }
 
-@media (max-width: 500px) {
+.services .icon {
+    background: #fff;
+    border-radius: 50%;
+    width: 110px;
+    height: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -55px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.services .icon svg {
+    width: 40px;
+    fill: #4cb480;
+}
+
+.services .content {
+    padding-top: 40px;
+}
+
+@media (max-width: 1200px) {
     .services {
         flex-direction: column;
-    } 
+    }
+}
+
+
+@media (max-width: 640px) {
+    .aside {
+        width: 100%;
+        background-color: #282d32;
+        position: relative;
+        height: auto;
+        padding: 10px;
+    }
+
+    .main-content {
+        margin-left: 0;
+        padding: 10px;
+    }
+}
+
+.toggle {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+.nav svg {
+    fill: #fff
+}
+
+.toggle:checked ~ ul {
+    display: none;
 }
