@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "npx sass --watch -s compressed src/scss/main.scss ./styles.css"
+    "dev": "npx sass --watch src/scss/main.scss ./styles.css"
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/rachkovsky/F2020-HTML-CSS#readme",
   "dependencies": {
+    "bootstrap": "^4.5.3",
     "sass": "^1.29.0"
   }
 }
