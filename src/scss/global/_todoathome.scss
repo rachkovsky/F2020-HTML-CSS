@@ -7,14 +7,23 @@ body {
     font-family: 'Poppins', 'Arial', sans-serif;
 }
 
+.wrapper {
+    display: flex;
+    align-items: stretch;
+}
 
 
 .main-content {
-    margin-left: 150px;
     padding: 10px;
 }
 
+.content-wrap {
+    max-width: 1450px;
+    padding: 0 20px;
+}
+
 .logo {
+    padding-top: 40px;
     text-align: center;
     position: relative;
     font-size: 32px;
@@ -25,11 +34,11 @@ body {
 .logo:after {
     display: block;
     content: "";
-    width: 50px;
+    width: 25px;
     height: 4px;
     background: #4cb480;
     position: absolute;
-    bottom: -8px;
+    bottom: -14px;
     left: 50%;
     transform: translateX(-50%);
 }

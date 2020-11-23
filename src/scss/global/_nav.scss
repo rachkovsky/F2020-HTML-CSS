@@ -1,5 +1,6 @@
 .nav {
 	position: relative;
+	padding-top: 62px;
 	
 	@media (max-width: 640px) {
 		position: static;
@@ -7,6 +8,7 @@
 	}
 
 	&::before, &::after {
+		
 		display: block;
 		content: "";
 		width: 90px;
@@ -15,7 +17,8 @@
 		position: absolute;
 		top: 0;
 		left: 50%;
-        transform: translateX(-50%);
+		transform: translateX(-50%);
+		
         
         @media (max-width: 640px) {
             display: none;
