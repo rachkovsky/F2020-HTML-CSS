@@ -1,0 +1,49 @@
+.services {
+    display: flex;
+    padding: 0 90px;
+  
+    > .item {
+      border-radius: 6px;
+      background-color: #808080;
+      margin: 0 30px;
+      padding: 0 62px;
+      position: relative;
+      margin-top: 60px;
+      min-width: 290px;
+    }
+  
+    .item-title {
+      text-transform: uppercase;
+      font-size: 30px;
+      color: #353a3f;
+    }
+  
+    .icon {
+      background: #fff;
+      border-radius: 50%;
+      width: 110px;
+      height: 110px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: -55px;
+      left: 50%;
+      transform: translateX(-50%);
+  
+      svg {
+        width: 40px;
+        fill: #4cb480;
+      }
+    }
+  
+    .content {
+      padding-top: 40px;
+    }
+  }
+  
+  @media (max-width: 1200px) {
+    .services {
+      flex-direction: column;
+    }
+  }

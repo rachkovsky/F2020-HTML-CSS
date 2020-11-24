@@ -10,6 +10,10 @@ body {
 .wrapper {
     display: flex;
     align-items: stretch;
+
+    @media (max-width: 640px) {
+        flex-direction: column;
+    }
 }
 
 
@@ -23,12 +27,19 @@ body {
 }
 
 .logo {
-    padding-top: 40px;
+    line-height: 1;
+    padding-top: 45px;
+    margin-bottom: 65px;
     text-align: center;
     position: relative;
     font-size: 32px;
     color: #4cb480;
     text-transform: uppercase;
+    
+    @media(max-width: 640px) {
+        margin-bottom: 0;
+        padding-top: 0;
+    }
 }
 
 .logo:after {
@@ -38,7 +49,7 @@ body {
     height: 4px;
     background: #4cb480;
     position: absolute;
-    bottom: -14px;
+    bottom: -9px;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -72,59 +83,6 @@ body {
 .item4 {
     background-color: blue;
 }
-
-
-
-.services {
-    display: flex;
-    padding: 0 90px;
-}
-
-.services > .item {
-    border-radius: 6px;
-    background-color: #808080;
-    margin: 0 30px;
-    padding: 0 62px;
-    position: relative;
-    margin-top: 60px;
-    min-width: 290px;
-}
-
-.services .item-title {
-    text-transform: uppercase;
-    font-size: 30px;
-    color: #353a3f;
-}
-
-.services .icon {
-    background: #fff;
-    border-radius: 50%;
-    width: 110px;
-    height: 110px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: -55px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.services .icon svg {
-    width: 40px;
-    fill: #4cb480;
-}
-
-.services .content {
-    padding-top: 40px;
-}
-
-@media (max-width: 1200px) {
-    .services {
-        flex-direction: column;
-    }
-}
-
 
 @media (max-width: 640px) {
 
