@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "production": "",
-    "development": "npx sass --watch src/scss/main.scss ./styles.css"
+    "dev": "npx gulp watch"
   },
   "repository": {
     "type": "git",
@@ -13,10 +12,6 @@
   },
   "author": "Pavel",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/rachkovsky/F2020-HTML-CSS/issues"
-  },
-  "homepage": "https://github.com/rachkovsky/F2020-HTML-CSS#readme",
   "dependencies": {
     "bootstrap": "^4.5.3"
   },
