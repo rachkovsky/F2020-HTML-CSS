@@ -20,8 +20,9 @@ function watch() {
            index: "./index.html",
         }
     });
-    // 
-    gulp.watch('src/scss/**/*.scss', styles)
+    gulp.watch('src/scss/**/*.scss', styles);
+    gulp.watch('index.html').on('change', browserSync.reload);
+
 }
 
 exports.watch = watch;

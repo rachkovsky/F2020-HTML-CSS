@@ -1,8 +1,9 @@
 .nav {
 	position: relative;
-	padding-top: 62px;
+	padding-top: 20px;
 	
-	@media (max-width: 640px) {
+	@media (max-width: 799px) {
+		padding-top: 0;
 		position: static;
 		order: 3;
 	}
@@ -10,6 +11,7 @@
 	&::before, &::after {
 		
 		display: block;
+		opacity: .2;
 		content: "";
 		width: 90px;
 		height: 2px;
@@ -19,61 +21,79 @@
 		left: 50%;
 		transform: translateX(-50%);
 		
-        
-        @media (max-width: 640px) {
+        @media (max-width: 799px) {
             display: none;
         }
 	}
 	&::after {
 		top: auto;
-		bottom: 0;
+		bottom: 10px;
 	}
-	ul {
+
+	&__list {
 		list-style: none;
 		text-align: center;
 		padding: 0;
 		margin: 0;
-		padding: 20px 0;
+		padding: 25px 0;
+		margin-bottom: 25px;
 
-		@media (max-width: 640px) {
+		@media (max-width: 799px) {
 			position: absolute;
 			background-color: #282d32;
 			width: 100%;
 			left: 0;
 		}
         
-        li {
-            margin-bottom: 15px;
+        &-item {
+			margin-bottom: 35px;
+			display: block;
             
             a {
 				color: white;
-				font-size: 18px;
+				font-size: 16px;
+				line-height: 1;
+				letter-spacing: 1px;
 				text-transform: uppercase;
 				text-decoration: none;
+				&:hover {
+					text-decoration: underline;
+				}
 			}
 		}
 	}
 
 	svg {
+		display: block;
 		fill: #fff;
     }
-    
 }
 
-.toggle {
+.toggle-icon {
+	cursor: pointer;
+	display: none;
+	@media (max-width: 799px) {
+		display: block;
+	}
+}
+
+.toggle-button {
     width: 0;
     height: 0;
 	visibility: hidden;
+	display: none;
 
-	& ~ ul {
-		@media (max-width: 640px) {
-			transition: transform 0.5s;
-			transform: translateY(-120%);
+	& ~ .nav__list {
+		// transition: transform 0.5s;
+		@media (max-width: 799px) {
+			display: none;
+			// transform: translateY(-120%);
 		}
 	}
 	
 	&:checked ~ ul {
-		transform: translateY(0);
+		display: block;
+		// transform: translateY(0);
 	}
 }
 

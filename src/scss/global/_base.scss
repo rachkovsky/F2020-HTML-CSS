@@ -1,0 +1,17 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', 'Arial', sans-serif;
+}
+
+.wrapper {
+    display: flex;
+    align-items: stretch;
+
+    @media (max-width: 799px) {
+        flex-direction: column;
+    }
+}
