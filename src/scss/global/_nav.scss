@@ -2,7 +2,7 @@
 	position: relative;
 	padding-top: 20px;
 	
-	@media (max-width: 640px) {
+	@media (max-width: 799px) {
 		padding-top: 0;
 		position: static;
 		order: 3;
@@ -21,13 +21,13 @@
 		left: 50%;
 		transform: translateX(-50%);
 		
-        @media (max-width: 640px) {
+        @media (max-width: 799px) {
             display: none;
         }
 	}
 	&::after {
 		top: auto;
-		bottom: 0;
+		bottom: 10px;
 	}
 
 	&__list {
@@ -35,10 +35,10 @@
 		text-align: center;
 		padding: 0;
 		margin: 0;
-		padding: 20px 0;
+		padding: 25px 0;
 		margin-bottom: 25px;
 
-		@media (max-width: 640px) {
+		@media (max-width: 799px) {
 			position: absolute;
 			background-color: #282d32;
 			width: 100%;
@@ -46,7 +46,8 @@
 		}
         
         &-item {
-            margin-bottom: 25px;
+			margin-bottom: 35px;
+			display: block;
             
             a {
 				color: white;
@@ -71,7 +72,7 @@
 .toggle-icon {
 	cursor: pointer;
 	display: none;
-	@media (max-width: 640px) {
+	@media (max-width: 799px) {
 		display: block;
 	}
 }
@@ -84,7 +85,7 @@
 
 	& ~ .nav__list {
 		// transition: transform 0.5s;
-		@media (max-width: 640px) {
+		@media (max-width: 799px) {
 			display: none;
 			// transform: translateY(-120%);
 		}

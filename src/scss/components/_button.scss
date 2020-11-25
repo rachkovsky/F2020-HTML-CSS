@@ -1,0 +1,23 @@
+.btn {
+
+    font-size: 17px;
+    background: #4BAE7C;
+    color: #fff;
+    text-transform: uppercase;
+    border: none;
+    height: 55px;
+    border-radius: 28px;
+    line-height: 55px;
+    padding: 0 35px;
+
+    &.btn-lg {
+        font-size: 20px;
+        height: 60px;
+        border-radius: 30px;
+        line-height: 60px;
+        padding: 0 60px;
+        
+    }
+
+}
+
