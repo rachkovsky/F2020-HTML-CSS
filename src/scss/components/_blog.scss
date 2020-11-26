@@ -1,45 +1,43 @@
 .blog {
+  &__heading {
+    font-size: 45px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding-bottom: 70px;
+    text-transform: uppercase;
 
-    &__heading {
-        text-transform: uppercase;
-        font-size: 45px;
-        letter-spacing: 1px;
-        font-weight: bold;
-        padding-bottom: 70px;
-
-        @media (max-width: 799px) {
-            font-size: 32px;
-            padding-bottom: 30px;
-        }
-        
+    @media (max-width: 799px) {
+      font-size: 32px;
+      padding-bottom: 30px;
     }
+  }
 
-    &__content {
-        display: flex;
-        flex-direction: column;
-    }
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .post-preview {
-    display: flex;
-    margin-bottom: 60px;
+  display: flex;
+  margin-bottom: 60px;
 
-    @media (max-width: 1599px) {
-        flex-direction: column;
-    }
-  
+  @media (max-width: 1599px) {
+    flex-direction: column;
+  }
+
   &__desc {
     padding: 35px 20px 20px 80px;
 
     @media (max-width: 1599px) {
-        padding-left: 0;
+      padding-left: 0;
     }
   }
 
   &__title {
-      text-transform: uppercase;
-      font-size: 30px;
-      padding-bottom: 20px;
+    font-size: 30px;
+    padding-bottom: 20px;
+    text-transform: uppercase;
   }
 
   &__text {
@@ -47,26 +45,26 @@
     line-height: 1.68;
     padding-bottom: 30px;
   }
-  
+
   &:last-child {
     margin-bottom: 0;
   }
-  
+
   &__img {
     border-radius: 5px;
-    overflow: hidden;
     flex-basis: 565px;
     flex-shrink: 0;
+    overflow: hidden;
 
     @media (max-width: 1599px) {
-        flex-basis: auto;
-        max-width: 565px;
+      flex-basis: auto;
+      max-width: 565px;
     }
-  
+
     > img {
       display: block;
-      object-fit: cover;
       height: 330px;
+      object-fit: cover;
       width: 100%;
     }
   }

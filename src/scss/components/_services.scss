@@ -3,37 +3,37 @@
     padding: 0 90px;
   
     > .item {
-      border-radius: 6px;
       background-color: #808080;
+      border-radius: 6px;
       margin: 0 30px;
-      padding: 0 62px;
-      position: relative;
       margin-top: 60px;
       min-width: 290px;
+      padding: 0 62px;
+      position: relative;
     }
   
     .item-title {
-      text-transform: uppercase;
-      font-size: 30px;
       color: #353a3f;
+      font-size: 30px;
+      text-transform: uppercase;
     }
   
     .icon {
+      align-items: center;
       background: #fff;
       border-radius: 50%;
-      width: 110px;
-      height: 110px;
       display: flex;
+      height: 110px;
       justify-content: center;
-      align-items: center;
+      left: 50%;
       position: absolute;
       top: -55px;
-      left: 50%;
       transform: translateX(-50%);
+      width: 110px;
   
       svg {
-        width: 40px;
         fill: #4cb480;
+        width: 40px;
       }
     }
   

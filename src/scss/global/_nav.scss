@@ -1,99 +1,99 @@
 .nav {
-	position: relative;
-	padding-top: 20px;
-	
-	@media (max-width: 799px) {
-		padding-top: 0;
-		position: static;
-		order: 3;
-	}
+  padding-top: 20px;
+  position: relative;
 
-	&::before, &::after {
-		
-		display: block;
-		opacity: .2;
-		content: "";
-		width: 90px;
-		height: 2px;
-		background-color: white;
-		position: absolute;
-		top: 0;
-		left: 50%;
-		transform: translateX(-50%);
-		
-        @media (max-width: 799px) {
-            display: none;
-        }
-	}
-	&::after {
-		top: auto;
-		bottom: 10px;
-	}
+  @media (max-width: 799px) {
+    order: 3;
+    padding-top: 0;
+    position: static;
+  }
 
-	&__list {
-		list-style: none;
-		text-align: center;
-		padding: 0;
-		margin: 0;
-		padding: 25px 0;
-		margin-bottom: 25px;
+  &::before,
+  &::after {
+    background-color: white;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    opacity: 0.2;
+    position: absolute;
+    top: 0;
+    transform: translateX(-50%);
+    width: 90px;
 
-		@media (max-width: 799px) {
-			position: absolute;
-			background-color: #282d32;
-			width: 100%;
-			left: 0;
-		}
-        
-        &-item {
-			margin-bottom: 35px;
-			display: block;
-            
-            a {
-				color: white;
-				font-size: 16px;
-				line-height: 1;
-				letter-spacing: 1px;
-				text-transform: uppercase;
-				text-decoration: none;
-				&:hover {
-					text-decoration: underline;
-				}
-			}
-		}
-	}
-
-	svg {
-		display: block;
-		fill: #fff;
+    @media (max-width: 799px) {
+      display: none;
     }
+  }
+  
+  &::after {
+    bottom: 10px;
+    top: auto;
+  }
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    margin-bottom: 25px;
+    padding: 0;
+    text-align: center;
+
+    @media (max-width: 799px) {
+      background-color: #282d32;
+      left: 0;
+      position: absolute;
+      width: 100%;
+    }
+
+    &-item {
+      display: block;
+      margin-bottom: 35px;
+
+      a {
+        color: white;
+        font-size: 16px;
+        letter-spacing: 1px;
+        line-height: 1;
+		text-decoration: none;
+        text-transform: uppercase;
+		
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  svg {
+    display: block;
+    fill: #fff;
+  }
 }
 
 .toggle-icon {
-	cursor: pointer;
-	display: none;
-	@media (max-width: 799px) {
-		display: block;
-	}
+  cursor: pointer;
+  display: none;
+  @media (max-width: 799px) {
+    display: block;
+  }
 }
 
 .toggle-button {
-    width: 0;
-    height: 0;
-	visibility: hidden;
-	display: none;
+  display: none;
+  height: 0;
+  visibility: hidden;
+  width: 0;
 
-	& ~ .nav__list {
-		// transition: transform 0.5s;
-		@media (max-width: 799px) {
-			display: none;
-			// transform: translateY(-120%);
-		}
-	}
-	
-	&:checked ~ ul {
-		display: block;
-		// transform: translateY(0);
-	}
+  ~ .nav__list {
+    // transition: transform 0.5s;
+    @media (max-width: 799px) {
+      display: none;
+      // transform: translateY(-120%);
+    }
+  }
+
+  &:checked ~ ul {
+    display: block;
+    // transform: translateY(0);
+  }
 }
-

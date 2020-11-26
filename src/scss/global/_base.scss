@@ -3,13 +3,13 @@
 }
 
 body {
-    margin: 0;
     font-family: 'Poppins', 'Arial', sans-serif;
+    margin: 0;
 }
 
 .wrapper {
-    display: flex;
     align-items: stretch;
+    display: flex;
 
     @media (max-width: 799px) {
         flex-direction: column;

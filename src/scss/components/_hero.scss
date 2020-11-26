@@ -1,14 +1,14 @@
 .hero {
+    background: #353A3F;
 
     color: #fff;
-    background: #353A3F;
 
     &__title {
         font-size: 60px;
-        text-transform: uppercase;
         font-weight: bold;
         letter-spacing: 3px;
         padding-bottom: 45px;
+        text-transform: uppercase;
 
         @media (max-width: 799px) {
             font-size: 32px;
