@@ -1,3 +1,17 @@
 .footer {
   background: #353a3f;
+
+  > div {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: 799px) {
+      flex-direction: column;
+    }
+  }
+
+  &__copywrite {
+    color: white;
+  }
 }

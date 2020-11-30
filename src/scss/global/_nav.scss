@@ -10,6 +10,7 @@
 
   &::before,
   &::after {
+
     background-color: white;
     content: "";
     display: block;
@@ -22,6 +23,13 @@
     width: 90px;
 
     @media (max-width: 799px) {
+      display: none;
+    }
+  }
+
+  &--footer {
+    &::before,
+    &::after {
       display: none;
     }
   }
@@ -38,23 +46,34 @@
     padding: 0;
     text-align: center;
 
-    @media (max-width: 799px) {
-      background-color: #282d32;
-      left: 0;
-      position: absolute;
-      width: 100%;
+    @at-root .nav--footer & {
+      display: flex;
+      margin-bottom: 0;
     }
+    @at-root .nav:not(.nav--footer) .nav__list {
+      @media (max-width: 799px) {
+        background-color: #282d32;
+        left: 0;
+        width: 100%;
+      }
+    }
+
 
     &-item {
       display: block;
       margin-bottom: 35px;
+
+
+      @at-root .nav--footer & {
+        padding-right: 30px;
+      }
 
       a {
         color: white;
         font-size: 16px;
         letter-spacing: 1px;
         line-height: 1;
-		text-decoration: none;
+		    text-decoration: none;
         text-transform: uppercase;
 		
         &:hover {

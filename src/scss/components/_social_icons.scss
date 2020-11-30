@@ -1,0 +1,17 @@
+.social-icons {
+    &__list {
+        display: flex;
+        margin: 0;
+        padding: 0;
+
+        &-item {
+            margin: 0 10px;
+        }
+    }
+
+    svg {
+        display: block;
+        fill: white;
+        width: 35px;
+    }
+}
