@@ -138,7 +138,7 @@ body {
   .nav--footer::before, .nav--footer::after {
     display: none; }
   .nav::after {
-    bottom: 10px;
+    bottom: -20px;
     top: auto; }
   .nav__list {
     list-style: none;
@@ -153,7 +153,6 @@ body {
       .nav:not(.nav--footer) .nav__list {
         background-color: #282d32;
         left: 0;
-        position: absolute;
         width: 100%; } }
     .nav__list-item {
       display: block;
@@ -194,9 +193,9 @@ body {
 .footer {
   background: #353a3f; }
   .footer > div {
+    align-items: center;
     display: flex;
-    justify-content: space-between;
-    align-items: center; }
+    justify-content: space-between; }
     @media (max-width: 799px) {
       .footer > div {
         flex-direction: column; } }
@@ -359,13 +358,13 @@ body {
     padding: 0 60px; }
 
 .social-icons__list {
-  padding: 0;
+  display: flex;
   margin: 0;
-  display: flex; }
+  padding: 0; }
   .social-icons__list-item {
     margin: 0 10px; }
 
 .social-icons svg {
-  fill: white;
   display: block;
+  fill: white;
   width: 35px; }
