@@ -12,26 +12,48 @@ client.connect(err => {
       console.error('connection error', err.stack)
     } else {
       console.log('connected');
-      client.query(`SELECT * FROM Persons`,
-                    (err, res) => {
-                        if (err) {
-                             console.log(err)
-                        } else {
-                            console.log(res.rows);
-                        }
-
-                    }
-        )
     }
-})
+});
 
+// app.set('views', path.join(__dirname, '/views'));
+app.set('view engine', 'pug');
 
-
-app.use(express.static('dist'));
+app.use(express.static(__dirname + '/public'));
 
 app.get('/', function(req, res){
     res.send('Hello');
 });
+
+app.get('/main', function(req, res) {
+    res.sendFile(__dirname + "/index.html");
+})
+
+
+app.get('/userlist', function(req, res){
+    client.query('SELECT * FROM Persons', function(err, response){
+        if (err) {
+            res.send('Error');
+        } else {
+            res.render('index', { title: 'Awesome page', users: response.rows});
+        }
+    })
+})
+
+app.get('/adduser', function(req, res) {
+    res.render('addUser');
+})
+
+
+
+
+
+
+
+
+
+
+
+
 
 app.listen(3000, function() {
     console.log('success');
