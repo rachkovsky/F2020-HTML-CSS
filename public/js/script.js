@@ -6,8 +6,38 @@ document.addEventListener('DOMContentLoaded', function() {
 
     btn.addEventListener('click', function(e) {
         e.preventDefault();
-        console.log(form.elements);
+        let data = {};
+        const elements = [...form.elements];
+        for (let el of elements) {
+            if (el.type !== 'submit') {
+                data[el.name] = el.value;
+            }
+        }
+        console.log(data);
+        console.log(JSON.stringify(data));
+        fetch('/createUser', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json;charset=utf-8'
+            },
+            body: JSON.stringify(data)
+        }).then((response) => {
+            console.log(response);
+            return response.json();
+          })
+          .then((data) => {
+            console.log(data);
+            form.insertAdjacentHTML('beforeend', '<p class="alert alert-success">Inserted</p>');
+          });
     });
+
+
+
+    // {
+    //     firstname: 'gdfgdfgdf',
+    //     lastname: 'fgsdgsfgfg'
+    // }
+
 
 
 });

@@ -1,5 +1,6 @@
 extends layout
 
+
 block content
     .container
         .row
@@ -7,9 +8,18 @@ block content
                 form#form
                     .form-group
                         label(for='firstname') Name
-                        input#firstname.form-control(type='text' placeholder='firstname')
+                        input#firstname.form-control(type='text' name='firstname' placeholder='firstname')
                     .form-group
                         label(for='lastname') LastName
-                        input#lastname.form-control(type='text' placeholder='lastname')
+                        input#lastname.form-control(type='text' name='lastname' placeholder='lastname')
                     .form-group
                         button.btn.btn-primary Add
+                            .lds-roller
+                                div
+                                div
+                                div
+                                div
+                                div
+                                div
+                                div
+                                div
