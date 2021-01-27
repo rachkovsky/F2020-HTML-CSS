@@ -13,6 +13,14 @@ client.connect(err => {
       console.error('connection error', err.stack)
     } else {
       console.log('connected');
+      client.query(`SELECT * from Users`
+        , function(err, response){
+        if (err) {
+            console.log(err)
+        } else {
+            console.log(response.rows)
+        }
+    })
     }
 });
 
@@ -46,7 +54,10 @@ app.get('/adduser', function(req, res) {
 })
 
 app.post('/createUser', function(req, res){
-    console.log(req.body.firstname)
+    console.log(req.body.firstname);
+    if (req.body.firstname.length < 1 || req.body.lastname.length < 1) {
+        return res.status(400).send({error: 'Firstname or lastname is empty'});
+    }
     client.query(`INSERT 
                   INTO Persons (firstname, lastname)
                   VALUES ('${req.body.firstname}', '${req.body.lastname}')`, (err, result) => {
@@ -58,6 +69,15 @@ app.post('/createUser', function(req, res){
     });
 });
 
+app.get('/login', function(req, res) {
+    res.render('login');
+});
+
+app.post('/login', function(req, res) {
+    if (true) {
+        res.redirect('/admin');
+    }
+});
 
 
 app.listen(3000, function() {
