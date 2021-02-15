@@ -13,7 +13,7 @@ client.connect(err => {
       console.error('connection error', err.stack)
     } else {
       console.log('connected');
-      client.query(`SELECT * from Users`
+      client.query(`SELECT * from siteData`
         , function(err, response){
         if (err) {
             console.log(err)
@@ -73,6 +73,17 @@ app.get('/login', function(req, res) {
     res.render('login');
 });
 
+app.get('/admin', function(req, res) {
+    client.query('SELECT * from siteData', (err, response) => {
+        if (!err) {
+            console.log(response.rows[0]);
+            res.render('admin', response.rows[0]);
+        }
+    });
+
+    
+});
+
 app.post('/login', function(req, res) {
     if (true) {
         res.redirect('/admin');
@@ -80,6 +91,6 @@ app.post('/login', function(req, res) {
 });
 
 
-app.listen(3000, function() {
+app.listen(3001, function() {
     console.log('success');
 });

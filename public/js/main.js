@@ -115,7 +115,7 @@ eval("var b = function b() {\n  return console.log('hello');\n};\n\n//# sourceUR
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("console.log('hello from c');\n\n//# sourceURL=webpack:///./src/js/components/c.js?");
+eval("var a = function a() {\n  for (var _len = arguments.length, ar = new Array(_len), _key = 0; _key < _len; _key++) {\n    ar[_key] = arguments[_key];\n  }\n\n  console.log(ar);\n};\n\na(1, 2); //2;\n\na(4, 6, 7, 8); //4;\n\n//# sourceURL=webpack:///./src/js/components/c.js?");
 
 /***/ }),
 
