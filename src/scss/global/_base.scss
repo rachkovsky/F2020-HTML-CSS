@@ -16,39 +16,6 @@ body {
     }
 }
 
-$gutter: 35px;
-.container {
-    border: 1px solid;
-    margin: auto;
-    max-width: 700px;
-    padding: $gutter;
-}
-
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: -$gutter;
-    margin-right: -$gutter;
-}
-
-.col {
-    border: 1px solid;
-    // flex-basis: 150px;
-    flex: 1 1 150px;
-    margin: $gutter;
-    min-height: 100px;
-    padding: 10px;
-}
-
-
-.col:nth-child(2n+3) {
-    background-color: chartreuse;
-}
-
-.col:nth-child(2n+2) {
-    background-color: red;
-}
-
 .hide {
     display: none;
 }

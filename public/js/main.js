@@ -86,36 +86,27 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/js/components/a.js":
-/*!********************************!*\
-  !*** ./src/js/components/a.js ***!
-  \********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/***/ "./src/js/components/cart.js":
+/*!***********************************!*\
+  !*** ./src/js/components/cart.js ***!
+  \***********************************/
+/*! exports provided: Cart */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-eval("function q(nums, k) {\n  for (var i = 0; i < nums.length - 1; i++) {\n    for (var j = i + 1; j < nums.length; j++) {\n      if (nums[i] + nums[j] === k) {\n        console.log(true);\n        return true;\n      }\n    }\n  }\n\n  return false;\n}\n\nq([1, 2, 3], 5);\n\n//# sourceURL=webpack:///./src/js/components/a.js?");
-
-/***/ }),
-
-/***/ "./src/js/components/b.js":
-/*!********************************!*\
-  !*** ./src/js/components/b.js ***!
-  \********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-eval("var b = function b() {\n  return console.log('hello');\n};\n\n//# sourceURL=webpack:///./src/js/components/b.js?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"Cart\", function() { return Cart; });\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }\n\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }\n\nvar Cart = /*#__PURE__*/function () {\n  function Cart() {\n    _classCallCheck(this, Cart);\n\n    this.items = [];\n  }\n\n  _createClass(Cart, [{\n    key: \"countItem\",\n    value: function countItem() {\n      return this.items.length;\n    }\n  }, {\n    key: \"getItemList\",\n    value: function getItemList() {\n      return this.items;\n    }\n  }, {\n    key: \"addItem\",\n    value: function addItem(item) {\n      this.items.push(item);\n    }\n  }, {\n    key: \"removeItem\",\n    value: function removeItem(index) {\n      this.items.splice(index, 1);\n    }\n  }]);\n\n  return Cart;\n}();\n\n//# sourceURL=webpack:///./src/js/components/cart.js?");
 
 /***/ }),
 
-/***/ "./src/js/components/c.js":
-/*!********************************!*\
-  !*** ./src/js/components/c.js ***!
-  \********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/***/ "./src/js/components/product.js":
+/*!**************************************!*\
+  !*** ./src/js/components/product.js ***!
+  \**************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-eval("var a = function a() {\n  for (var _len = arguments.length, ar = new Array(_len), _key = 0; _key < _len; _key++) {\n    ar[_key] = arguments[_key];\n  }\n\n  console.log(ar);\n};\n\na(1, 2); //2;\n\na(4, 6, 7, 8); //4;\n\n//# sourceURL=webpack:///./src/js/components/c.js?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _cart__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./cart */ \"./src/js/components/cart.js\");\n\ndocument.addEventListener('DOMContentLoaded', function () {\n  var cartBtn = document.querySelector('#cart');\n  var products = document.querySelector('.products');\n  var badge = document.querySelector('#badge');\n  var cart = new _cart__WEBPACK_IMPORTED_MODULE_0__[\"Cart\"]();\n  products.addEventListener('click', function (event) {\n    if (event.target.nodeName === 'BUTTON' && event.target.dataset.id) {\n      cart.addItem(event.target.dataset.id);\n      badge.innerText = cart.countItem();\n      console.log(cart.getItemList());\n    }\n  });\n});\n\n//# sourceURL=webpack:///./src/js/components/product.js?");
 
 /***/ }),
 
@@ -127,7 +118,7 @@ eval("var a = function a() {\n  for (var _len = arguments.length, ar = new Array
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _components_a__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/a */ \"./src/js/components/a.js\");\n/* harmony import */ var _components_a__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_components_a__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _components_b__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/b */ \"./src/js/components/b.js\");\n/* harmony import */ var _components_b__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_components_b__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _components_c__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/c */ \"./src/js/components/c.js\");\n/* harmony import */ var _components_c__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_components_c__WEBPACK_IMPORTED_MODULE_2__);\n\n\n\n\n//# sourceURL=webpack:///./src/js/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _components_cart__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/cart */ \"./src/js/components/cart.js\");\n/* harmony import */ var _components_product__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/product */ \"./src/js/components/product.js\");\n\n\n\n//# sourceURL=webpack:///./src/js/index.js?");
 
 /***/ })
 
