@@ -13,6 +13,7 @@
   "author": "Pavel",
   "license": "ISC",
   "dependencies": {
+    "@glidejs/glide": "^3.4.1",
     "body-parser": "^1.19.0",
     "bootstrap": "^4.5.3",
     "express": "^4.17.1",
