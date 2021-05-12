@@ -92,12 +92,14 @@ app.post('/login', function(req, res) {
 const items = [
     {
         id: 1,
+        size: 's',
         name: 'Pizza 1',
         price: '15',
         image: 'https://i.pinimg.com/originals/88/2b/c4/882bc48d3d1d88ca63969ec7ad09406a.jpg'
     },
     {
         id: 2,
+        size: 'm',
         name: 'Pizza 2',
         price: '20',
         image: 'https://upload.wikimedia.org/wikipedia/commons/a/a3/Eq_it-na_pizza-margherita_sep2005_sml.jpg'
@@ -105,8 +107,40 @@ const items = [
     },
     {
         id: 3,
+        size: 'l',
         name: 'Pizza 3',
         price: '30',
+        image: 'https://1000.menu/img/content-v2/63/46/809/pitstsa-domashnyaya_1591686572_16_max.jpg'
+
+    },
+    {
+        id: 4,
+        size: 's',
+        name: 'Pizza 4',
+        price: '15',
+        image: 'https://i.pinimg.com/originals/88/2b/c4/882bc48d3d1d88ca63969ec7ad09406a.jpg'
+    },
+    {
+        id: 5,
+        size: 'm',
+        name: 'Pizza 5',
+        price: '20',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/a/a3/Eq_it-na_pizza-margherita_sep2005_sml.jpg'
+ 
+    },
+    {
+        id: 6,
+        size: 'l',
+        name: 'Pizza 6',
+        price: '35',
+        image: 'https://1000.menu/img/content-v2/63/46/809/pitstsa-domashnyaya_1591686572_16_max.jpg'
+
+    },
+    {
+        id: 7,
+        size: 'm',
+        name: 'Pizza 7',
+        price: '38',
         image: 'https://1000.menu/img/content-v2/63/46/809/pitstsa-domashnyaya_1591686572_16_max.jpg'
 
     },
@@ -117,6 +151,6 @@ app.get('/cart', function(req, res) {
 });
 
 
-app.listen(3001, function() {
+app.listen(3002, function() {
     console.log('success');
 });
