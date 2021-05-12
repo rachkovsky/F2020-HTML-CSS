@@ -1,5 +1,4 @@
 import { Cart } from './cart';
-import { store } from './store';
 
 document.addEventListener('DOMContentLoaded', () => {
 

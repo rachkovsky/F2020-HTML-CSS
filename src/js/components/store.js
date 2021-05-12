@@ -2,7 +2,7 @@ import { createStore } from 'redux';
 
 const initialState = {
     cartCounter: 0,
-    selectedFilter: null
+    selectedFilter: 'm'
 }
 
 function appReducer(appState = initialState, action) {
